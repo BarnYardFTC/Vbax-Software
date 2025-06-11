@@ -1,8 +1,13 @@
 package org.firstinspires.ftc.teamcode.Systems;
 
 
+import static org.firstinspires.ftc.robotcore.external.BlocksOpModeCompanion.telemetry;
+
 import com.acmerobotics.dashboard.config.Config;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
+
+import org.firstinspires.ftc.robotcore.external.Telemetry;
 
 @Config
 public class Arm {
@@ -14,8 +19,8 @@ public class Arm {
     private double angle;
 
 
-    public static int MINIMUM_SOFT_LIMIT = 45;
-    public static int MAXIMUM_SOFT_LIMIT = 315;
+    public static int MINIMUM_SOFT_LIMIT = 35;
+    public static int MAXIMUM_SOFT_LIMIT = 325;
 
     private final double START_DEGREE = 35;
 
@@ -46,8 +51,27 @@ public class Arm {
         this.armRight = right;
 
         this.angle = START_DEGREE;
+
+        armRight.setDirection(DcMotorSimple.Direction.REVERSE);
+
     }
 
+    public void armMovement(double rTrigger, double lTrigger, Telemetry tele){
+        armLeft.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        armRight.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        armLeft.setPower(rTrigger - lTrigger);
+        armRight.setPower(rTrigger - lTrigger);
+        tele.addData("encoderL", armLeft.getCurrentPosition());
+        tele.addData("encoderR", armRight.getCurrentPosition());
+        tele.update();
+
+    }
+
+    public void setPower(double Power){
+
+       // armLeft
+
+    }
 
 
 }
