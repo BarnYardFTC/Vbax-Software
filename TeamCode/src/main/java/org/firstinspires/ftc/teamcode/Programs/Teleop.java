@@ -1,10 +1,18 @@
 package org.firstinspires.ftc.teamcode.Programs;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-public class Teleop extends LinearOpMode {
+
+@TeleOp
+public class Teleop extends LinearOpMode { //WN Iterative??
     @Override
     public void runOpMode() throws InterruptedException {
+
+
+
+
+
 
     }
 }

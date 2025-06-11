@@ -7,7 +7,9 @@ public class Arm {
 
     private DcMotor armRight;
     private DcMotor armLeft;
-    private final double startDegree = 35;
+    private final double START_DEGREE = 35;
+
+    private double deltaAngle;
     private double angle;
     public static int minSoftLim = 45;
     public static int maxSoftLim = 315;
@@ -18,6 +20,7 @@ public class Arm {
     public static int COLLECT_FIELD_FRONT = 140;
     public static int COLLECT_FIELD_BACK = 220;
     public static int SCORE_LB = 250;
+    public static int COLLECT_SPEC_FENCE = 70;
     public static int PREP_SPEC = 190;
     public static int SCORE_SPEC = 210;
     public static int CLIMB = 300;
@@ -36,11 +39,8 @@ public class Arm {
         this.armLeft = left;
         this.armRight = right;
 
-        this.angle = startDegree;
-
+        this.angle = START_DEGREE;
     }
-
-
 
 
 
