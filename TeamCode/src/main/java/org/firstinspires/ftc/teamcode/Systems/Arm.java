@@ -67,11 +67,133 @@ public class Arm {
 
     }
 
-    public void setPower(double Power){
+    private void setPower(double power){
 
-       // armLeft
+        armLeft.setPower(power);
+        armRight.setPower(power);
 
     }
 
+    public void moveToDefault(double power){
+
+        int targetTicks = (int)(DEFAULT * TICK_PER_DEGREE);
+
+        armLeft.setTargetPosition(targetTicks);
+        armRight.setTargetPosition(targetTicks);
+
+        armLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        armRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+        setPower(power);
+
+    }
+
+    public void moveToSubPrep(double power){
+        int targetTicks = (int)(SUB_PREP * TICK_PER_DEGREE);
+
+        armLeft.setTargetPosition(targetTicks);
+        armRight.setTargetPosition(targetTicks);
+
+        armLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        armRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+        setPower(power);
+    }
+
+    public void moveToScoreSpec(double power){
+        int targetTicks = (int)(SCORE_SPEC * TICK_PER_DEGREE);
+
+        armLeft.setTargetPosition(targetTicks);
+        armRight.setTargetPosition(targetTicks);
+
+        armLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        armRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+        setPower(power);
+    }
+
+    public void moveToSubCollect(double power){
+        int targetTicks = (int)(SUB_COLLECT * TICK_PER_DEGREE);
+
+        armLeft.setTargetPosition(targetTicks);
+        armRight.setTargetPosition(targetTicks);
+
+        armLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        armRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+        setPower(power);
+    }
+
+    public void climbPos(double power){
+        int targetTicks = (int)(CLIMB * TICK_PER_DEGREE);
+
+        armLeft.setTargetPosition(targetTicks);
+        armRight.setTargetPosition(targetTicks);
+
+        armLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        armRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+        setPower(power);
+    }
+
+    public void moveToCollectFieldFront(double power){
+        int targetTicks = (int)(COLLECT_FIELD_FRONT * TICK_PER_DEGREE);
+
+        armLeft.setTargetPosition(targetTicks);
+        armRight.setTargetPosition(targetTicks);
+
+        armLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        armRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+        setPower(power);
+    }
+
+    public void moveToScoreLB(double power){
+        int targetTicks = (int)(SCORE_LB * TICK_PER_DEGREE);
+
+        armLeft.setTargetPosition(targetTicks);
+        armRight.setTargetPosition(targetTicks);
+
+        armLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        armRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+        setPower(power);
+    }
+
+    public void moveToCollectFieldBack(double power){
+        int targetTicks = (int)(COLLECT_FIELD_BACK * TICK_PER_DEGREE);
+
+        armLeft.setTargetPosition(targetTicks);
+        armRight.setTargetPosition(targetTicks);
+
+        armLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        armRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+        setPower(power);
+    }
+
+    public void moveToPrepSpec(double power){
+        int targetTicks = (int)(PREP_SPEC * TICK_PER_DEGREE);
+
+        armLeft.setTargetPosition(targetTicks);
+        armRight.setTargetPosition(targetTicks);
+
+        armLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        armRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+        setPower(power);
+    }
+
+    public void moveToCollectSpecFence(double power){
+        int targetTicks = (int)(COLLECT_SPEC_FENCE * TICK_PER_DEGREE);
+
+        armLeft.setTargetPosition(targetTicks);
+        armRight.setTargetPosition(targetTicks);
+
+        armLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        armRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+        setPower(power);
+    }
 
 }
